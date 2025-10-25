@@ -1,0 +1,44 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+.next/
+out/
+dist/
+build/
+.tmp/
+
+# OS
+.DS_Store
+
+# Env files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Vercel
+.vercel
+
+# Coverage
+coverage/
+
+# Editors
+.vscode/
+.idea/
+
+# React Native / Mobile
+.expo/
+.expo-shared/
+android/app/build/
+ios/Pods/
+ios/build/
