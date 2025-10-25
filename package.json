@@ -1,0 +1,33 @@
+{
+  "name": "pathfinder",
+  "version": "1.0.0",
+  "description": "AI-powered social impact platform for homeless and housing-insecure individuals",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:mobile\" \"npm run dev:web\" \"npm run dev:backend\"",
+    "dev:mobile": "cd mobile && npx react-native run-android",
+    "dev:web": "cd web && npm run dev",
+    "dev:backend": "cd backend && nodemon server.js",
+    "build": "npm run build:mobile && npm run build:web && npm run build:backend",
+    "build:mobile": "cd mobile && npx react-native build-android",
+    "build:web": "cd web && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "test": "npm run test:mobile && npm run test:web && npm run test:backend"
+  },
+  "keywords": ["social-impact", "homeless", "resources", "ai", "gemini"],
+  "author": "Social Impact Team",
+  "license": "MIT",
+  "workspaces": [
+    "mobile",
+    "web",
+    "backend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/pathfinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/pathfinder/issues"
+  },
+  "homepage": "https://github.com/your-username/pathfinder#readme"
+}
