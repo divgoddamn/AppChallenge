@@ -1,5 +1,3 @@
-# Exclude everything by default
-*
-# Include the web app and Vercel config
-!web/**
-!vercel.json
+backend
+mobile
+web
