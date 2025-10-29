@@ -346,7 +346,81 @@ export const newsData = [
   { id: 122, headline: "Economy in Jersey City", summary: "Business update.", source: "Jersey City Business", date: "2025-10-26", lat: 40.7178, lng: -74.0431, topic: "Economy", sentiment: "positive", importance: "low" },
   { id: 123, headline: "Healthcare in Greensboro", summary: "Medical facility.", source: "Greensboro Health", date: "2025-10-24", lat: 36.0726, lng: -79.7920, topic: "Healthcare", sentiment: "positive", importance: "low" },
   { id: 124, headline: "Education in Durham", summary: "School news.", source: "Durham Education", date: "2025-10-25", lat: 35.9940, lng: -78.8986, topic: "Education", sentiment: "positive", importance: "low" },
-  { id: 125, headline: "Transportation in Winston-Salem", summary: "Transit update.", source: "Winston-Salem Transit", date: "2025-10-23", lat: 36.0999, lng: -80.2442, topic: "Transportation", sentiment: "positive", importance: "low" }
+  { id: 125, headline: "Transportation in Winston-Salem", summary: "Transit update.", source: "Winston-Salem Transit", date: "2025-10-23", lat: 36.0999, lng: -80.2442, topic: "Transportation", sentiment: "positive", importance: "low" },
+  // Africa
+  { id: 126, headline: "Development in Johannesburg", summary: "City update.", source: "Johannesburg News", date: "2025-10-24", lat: -26.2044, lng: 28.0456, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 127, headline: "Business in Cape Town", summary: "Commerce news.", source: "Cape Town Business", date: "2025-10-25", lat: -33.9249, lng: 18.4241, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 128, headline: "Infrastructure in Lagos", summary: "Development.", source: "Lagos News", date: "2025-10-23", lat: 6.5244, lng: 3.3792, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 129, headline: "Healthcare in Nairobi", summary: "Medical services.", source: "Nairobi Health", date: "2025-10-26", lat: -1.2921, lng: 36.8219, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 130, headline: "Education in Accra", summary: "School program.", source: "Accra Education", date: "2025-10-24", lat: 5.6037, lng: -0.1870, topic: "Education", sentiment: "positive", importance: "low" },
+  // Middle East
+  { id: 131, headline: "Tech News from Tel Aviv", summary: "Technology update.", source: "Tel Aviv Tech", date: "2025-10-25", lat: 32.0853, lng: 34.7818, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 132, headline: "Business in Riyadh", summary: "Commerce report.", source: "Riyadh Business", date: "2025-10-23", lat: 24.7136, lng: 46.6753, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 133, headline: "Culture in Baghdad", summary: "Arts initiative.", source: "Baghdad Culture", date: "2025-10-26", lat: 33.3128, lng: 44.3615, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 134, headline: "Infrastructure in Tehran", summary: "City improvement.", source: "Tehran News", date: "2025-10-24", lat: 35.6892, lng: 51.3890, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  // India and South Asia
+  { id: 135, headline: "Tech in New Delhi", summary: "Technology sector.", source: "Delhi Tech", date: "2025-10-25", lat: 28.7041, lng: 77.1025, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 136, headline: "Business in Kolkata", summary: "Commerce news.", source: "Kolkata Business", date: "2025-10-23", lat: 22.5726, lng: 88.3639, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 137, headline: "Healthcare in Chennai", summary: "Medical facility.", source: "Chennai Health", date: "2025-10-26", lat: 13.0827, lng: 80.2707, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 138, headline: "Education in Karachi", summary: "School initiative.", source: "Karachi Education", date: "2025-10-24", lat: 24.8607, lng: 67.0011, topic: "Education", sentiment: "positive", importance: "low" },
+  // Central Asia
+  { id: 139, headline: "Development in Almaty", summary: "City project.", source: "Almaty News", date: "2025-10-25", lat: 43.2380, lng: 76.9454, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 140, headline: "Business in Tashkent", summary: "Commerce update.", source: "Tashkent Business", date: "2025-10-23", lat: 41.2995, lng: 69.2401, topic: "Business", sentiment: "positive", importance: "low" },
+  // Eastern Europe
+  { id: 141, headline: "Infrastructure in Warsaw", summary: "Development.", source: "Warsaw News", date: "2025-10-26", lat: 52.2297, lng: 21.0122, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 142, headline: "Healthcare in Budapest", summary: "Medical services.", source: "Budapest Health", date: "2025-10-24", lat: 47.4979, lng: 19.0402, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 143, headline: "Culture in Bucharest", summary: "Arts event.", source: "Bucharest Culture", date: "2025-10-25", lat: 44.4268, lng: 26.1025, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 144, headline: "Tech in Kyiv", summary: "Technology news.", source: "Kyiv Tech", date: "2025-10-23", lat: 50.4501, lng: 30.5234, topic: "Technology", sentiment: "positive", importance: "low" },
+  // Scandinavia and Baltics
+  { id: 145, headline: "Business in Stockholm", summary: "Commerce report.", source: "Stockholm Business", date: "2025-10-26", lat: 59.3293, lng: 18.0686, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 146, headline: "Education in Tallinn", summary: "School program.", source: "Tallinn Education", date: "2025-10-24", lat: 59.4370, lng: 24.7536, topic: "Education", sentiment: "positive", importance: "low" },
+  // Russia and Central Asia
+  { id: 147, headline: "Infrastructure in Novosibirsk", summary: "Development.", source: "Novosibirsk News", date: "2025-10-25", lat: 55.0415, lng: 82.9346, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 148, headline: "Healthcare in Vladivostok", summary: "Medical facility.", source: "Vladivostok Health", date: "2025-10-23", lat: 43.1056, lng: 131.8735, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  // Southeast Asia
+  { id: 149, headline: "Tech in Ho Chi Minh City", summary: "Technology update.", source: "HCMC Tech", date: "2025-10-26", lat: 10.8231, lng: 106.6297, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 150, headline: "Business in Manila", summary: "Commerce news.", source: "Manila Business", date: "2025-10-24", lat: 14.5995, lng: 120.9842, topic: "Business", sentiment: "positive", importance: "low" },
+  // Pacific
+  { id: 151, headline: "Development in Fiji", summary: "Island project.", source: "Fiji News", date: "2025-10-25", lat: -17.7134, lng: 178.0650, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 152, headline: "Culture in Samoa", summary: "Arts initiative.", source: "Samoa Culture", date: "2025-10-23", lat: -13.7590, lng: -172.1046, topic: "Culture", sentiment: "positive", importance: "low" },
+  // South America
+  { id: 153, headline: "Tech in Bogotá", summary: "Technology news.", source: "Bogotá Tech", date: "2025-10-26", lat: 4.7110, lng: -74.0721, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 154, headline: "Business in Caracas", summary: "Commerce report.", source: "Caracas Business", date: "2025-10-24", lat: 10.4806, lng: -66.9036, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 155, headline: "Infrastructure in Quito", summary: "City development.", source: "Quito News", date: "2025-10-25", lat: -0.2299, lng: -78.5099, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 156, headline: "Healthcare in Lima", summary: "Medical services.", source: "Lima Health", date: "2025-10-23", lat: -12.0464, lng: -77.0428, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  // Canada
+  { id: 157, headline: "Tech in Toronto", summary: "Technology update.", source: "Toronto Tech", date: "2025-10-26", lat: 43.6532, lng: -79.3832, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 158, headline: "Business in Vancouver", summary: "Commerce news.", source: "Vancouver Business", date: "2025-10-24", lat: 49.2827, lng: -123.1207, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 159, headline: "Culture in Montreal", summary: "Arts event.", source: "Montreal Culture", date: "2025-10-25", lat: 45.5017, lng: -73.5673, topic: "Culture", sentiment: "positive", importance: "low" },
+  // Mexico and Central America
+  { id: 160, headline: "Tech in Monterrey", summary: "Technology news.", source: "Monterrey Tech", date: "2025-10-23", lat: 25.6866, lng: -100.3161, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 161, headline: "Business in Guatemala City", summary: "Commerce report.", source: "Guatemala Business", date: "2025-10-26", lat: 14.6343, lng: -90.5069, topic: "Business", sentiment: "positive", importance: "low" },
+  // Caribbean
+  { id: 162, headline: "Tourism in Havana", summary: "Travel update.", source: "Havana News", date: "2025-10-24", lat: 23.1136, lng: -82.3666, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 163, headline: "Culture in Santo Domingo", summary: "Arts initiative.", source: "Santo Domingo Culture", date: "2025-10-25", lat: 18.4861, lng: -69.9312, topic: "Culture", sentiment: "positive", importance: "low" },
+  // Oceania
+  { id: 164, headline: "Infrastructure in Auckland", summary: "City project.", source: "Auckland News", date: "2025-10-23", lat: -37.0082, lng: 174.6645, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 165, headline: "Healthcare in Brisbane", summary: "Medical facility.", source: "Brisbane Health", date: "2025-10-26", lat: -27.4698, lng: 153.0251, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 166, headline: "Education in Perth", summary: "School program.", source: "Perth Education", date: "2025-10-24", lat: -31.9505, lng: 115.8605, topic: "Education", sentiment: "positive", importance: "low" },
+  // More Europe
+  { id: 167, headline: "Business in Athens", summary: "Commerce news.", source: "Athens Business", date: "2025-10-25", lat: 37.9838, lng: 23.7275, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 168, headline: "Culture in Istanbul", summary: "Arts event.", source: "Istanbul Culture", date: "2025-10-23", lat: 41.0082, lng: 28.9784, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 169, headline: "Tech in Madrid", summary: "Technology update.", source: "Madrid Tech", date: "2025-10-26", lat: 40.4168, lng: -3.7038, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 170, headline: "Infrastructure in Lisbon", summary: "City development.", source: "Lisbon News", date: "2025-10-24", lat: 38.7223, lng: -9.1393, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  // Middle East/Asia continued
+  { id: 171, headline: "Healthcare in Jerusalem", summary: "Medical services.", source: "Jerusalem Health", date: "2025-10-25", lat: 31.7683, lng: 35.2137, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 172, headline: "Education in Beirut", summary: "School initiative.", source: "Beirut Education", date: "2025-10-23", lat: 33.3128, lng: 35.5228, topic: "Education", sentiment: "positive", importance: "low" },
+  { id: 173, headline: "Business in Dubai", summary: "Commerce report.", source: "Dubai Business", date: "2025-10-26", lat: 25.2048, lng: 55.2708, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 174, headline: "Culture in Doha", summary: "Arts event.", source: "Doha Culture", date: "2025-10-24", lat: 25.2854, lng: 51.5310, topic: "Culture", sentiment: "positive", importance: "low" },
+  // West Africa
+  { id: 175, headline: "Development in Dakar", summary: "City project.", source: "Dakar News", date: "2025-10-25", lat: 14.6928, lng: -17.0467, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 176, headline: "Business in Abidjan", summary: "Commerce news.", source: "Abidjan Business", date: "2025-10-23", lat: 5.3364, lng: -4.0365, topic: "Business", sentiment: "positive", importance: "low" },
+  // East Africa
+  { id: 177, headline: "Infrastructure in Addis Ababa", summary: "City development.", source: "Addis Ababa News", date: "2025-10-26", lat: 9.0320, lng: 38.7469, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 178, headline: "Healthcare in Dar es Salaam", summary: "Medical facility.", source: "Dar es Salaam Health", date: "2025-10-24", lat: -6.8000, lng: 39.2800, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  // South Asia continued
+  { id: 179, headline: "Tech in Dhaka", summary: "Technology update.", source: "Dhaka Tech", date: "2025-10-25", lat: 23.8103, lng: 90.4125, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 180, headline: "Education in Colombo", summary: "School program.", source: "Colombo Education", date: "2025-10-23", lat: 6.9271, lng: 80.7789, topic: "Education", sentiment: "positive", importance: "low" }
 ];
 
 export const topics = [
