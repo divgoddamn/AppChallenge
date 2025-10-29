@@ -119,10 +119,8 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 px-6 py-3 text-center text-sm text-gray-600 z-10">
-        <p>
-          🗺️ Empowering young people to explore and understand local news through interactive visualization
-        </p>
+      <footer className="bg-white border-t border-gray-200 px-8 py-3 text-center text-xs text-gray-500 z-10">
+        <p>Visualizing local news geographically</p>
       </footer>
     </div>
   );

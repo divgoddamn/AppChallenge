@@ -93,26 +93,26 @@ const TimeSlider = ({ news, onDateChange, dateRange }) => {
         <div className="flex justify-center gap-2">
           <button
             onClick={handleReset}
-            className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="p-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
             title="Reset to start"
           >
-            <SkipBack size={18} />
+            <SkipBack size={16} className="text-gray-700" />
           </button>
           
           <button
             onClick={handlePlayPause}
-            className="p-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            className="p-2 rounded bg-gray-900 text-white hover:bg-gray-800 transition-colors"
             title={isPlaying ? 'Pause' : 'Play'}
           >
-            {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+            {isPlaying ? <Pause size={16} /> : <Play size={16} />}
           </button>
           
           <button
             onClick={handleSkipToEnd}
-            className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="p-2 rounded bg-gray-200 hover:bg-gray-300 transition-colors"
             title="Skip to end"
           >
-            <SkipForward size={18} />
+            <SkipForward size={16} className="text-gray-700" />
           </button>
         </div>
 

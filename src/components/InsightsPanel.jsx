@@ -120,7 +120,7 @@ const InsightsPanel = ({ news }) => {
       </div>
 
       {/* Statistics */}
-      <div className="bg-white shadow-lg rounded-lg p-4">
+      <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
         <h3 className="font-semibold text-gray-800 mb-3">Quick Stats</h3>
         <div className="space-y-2 text-sm">
           <div className="flex justify-between">

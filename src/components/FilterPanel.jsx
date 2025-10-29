@@ -136,23 +136,20 @@ const FilterPanel = ({
       {/* Sentiments */}
       <div>
         <div className="flex items-center gap-2 mb-2">
-          <Heart size={18} className="text-gray-600" />
-          <h3 className="font-semibold text-gray-800">Sentiment</h3>
+          <Heart size={16} className="text-gray-400" />
+          <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Sentiment</h3>
         </div>
         <div className="flex gap-2">
           {Object.entries(sentiments).map(([key, value]) => (
             <button
               key={key}
               onClick={() => handleSentimentToggle(key)}
-              className={`flex-1 px-3 py-2 rounded-md text-xs font-medium text-white capitalize transition-all ${
+              className={`flex-1 px-3 py-2 rounded text-xs font-medium text-white capitalize transition-all ${
                 selectedSentiments.length === 0 || selectedSentiments.includes(key)
                   ? 'opacity-100'
-                  : 'opacity-40'
+                  : 'opacity-50'
               }`}
-              style={{ 
-                backgroundColor: value.color,
-                border: selectedSentiments.includes(key) ? '2px solid #1f2937' : '2px solid transparent'
-              }}
+              style={{ backgroundColor: value.color }}
             >
               {value.label}
             </button>
@@ -161,9 +158,9 @@ const FilterPanel = ({
         {selectedSentiments.length > 0 && (
           <button
             onClick={() => onSentimentChange([])}
-            className="mt-2 text-xs text-blue-600 hover:text-blue-800"
+            className="mt-3 text-xs text-gray-500 hover:text-gray-700"
           >
-            Clear all
+            Clear
           </button>
         )}
       </div>
