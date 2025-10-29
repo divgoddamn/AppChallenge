@@ -34,15 +34,15 @@ function App() {
   }, [searchTerm, dateRange, selectedTopics, selectedSentiments]);
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-gray-50">
+    <div className="h-screen w-screen flex flex-col bg-white">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg z-10">
-        <div className="px-6 py-4">
+      <header className="bg-white border-b border-gray-200 z-10">
+        <div className="px-8 py-4">
           <div className="flex items-center gap-3">
-            <MapPin size={32} className="text-blue-200" />
+            <MapPin size={28} className="text-gray-900" strokeWidth={1.5} />
             <div>
-              <h1 className="text-2xl font-bold">Map My News</h1>
-              <p className="text-sm text-blue-100">Visualize Local News Geographically</p>
+              <h1 className="text-xl font-semibold text-gray-900">Map My News</h1>
+              <p className="text-xs text-gray-500">Local news visualization</p>
             </div>
           </div>
         </div>
@@ -51,8 +51,8 @@ function App() {
       {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left Sidebar - Filters */}
-        <div className={`transition-all duration-300 ${showFilters ? 'w-80' : 'w-0'} overflow-hidden`}>
-          <div className="h-full overflow-y-auto p-4 bg-gray-50">
+        <div className={`transition-all duration-300 ${showFilters ? 'w-72' : 'w-0'} overflow-hidden border-r border-gray-200`}>
+          <div className="h-full overflow-y-auto p-6 bg-white">
             <FilterPanel
               searchTerm={searchTerm}
               onSearchChange={setSearchTerm}
@@ -79,10 +79,10 @@ function App() {
         {/* Toggle Button - Left */}
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className="z-20 bg-white hover:bg-gray-100 shadow-lg p-2 rounded-r-lg self-start mt-4 transition-colors"
+          className="z-20 bg-white hover:bg-gray-100 border border-gray-200 p-2 rounded self-start mt-4 transition-colors"
           title={showFilters ? 'Hide filters' : 'Show filters'}
         >
-          {showFilters ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          {showFilters ? <ChevronLeft size={18} className="text-gray-600" /> : <ChevronRight size={18} className="text-gray-600" />}
         </button>
 
         {/* Map Container */}
@@ -93,10 +93,10 @@ function App() {
           />
           
           {/* Stats Overlay */}
-          <div className="absolute top-4 left-4 bg-white shadow-lg rounded-lg px-4 py-2 z-10">
-            <p className="text-sm text-gray-600">
-              Showing <span className="font-bold text-blue-600">{filteredNews.length}</span> of{' '}
-              <span className="font-bold">{newsData.length}</span> stories
+          <div className="absolute top-4 left-4 bg-white border border-gray-200 rounded px-4 py-2 z-10">
+            <p className="text-xs text-gray-600">
+              Showing <span className="font-semibold text-gray-900">{filteredNews.length}</span> of{' '}
+              <span className="font-semibold">{newsData.length}</span> stories
             </p>
           </div>
         </div>
@@ -104,15 +104,15 @@ function App() {
         {/* Toggle Button - Right */}
         <button
           onClick={() => setShowInsights(!showInsights)}
-          className="z-20 bg-white hover:bg-gray-100 shadow-lg p-2 rounded-l-lg self-start mt-4 transition-colors"
+          className="z-20 bg-white hover:bg-gray-100 border border-gray-200 p-2 rounded self-start mt-4 transition-colors"
           title={showInsights ? 'Hide insights' : 'Show insights'}
         >
-          {showInsights ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
+          {showInsights ? <ChevronRight size={18} className="text-gray-600" /> : <ChevronLeft size={18} className="text-gray-600" />}
         </button>
 
         {/* Right Sidebar - Insights */}
-        <div className={`transition-all duration-300 ${showInsights ? 'w-80' : 'w-0'} overflow-hidden`}>
-          <div className="h-full overflow-y-auto p-4 bg-gray-50">
+        <div className={`transition-all duration-300 ${showInsights ? 'w-72' : 'w-0'} overflow-hidden border-l border-gray-200`}>
+          <div className="h-full overflow-y-auto p-6 bg-white">
             <InsightsPanel news={filteredNews} />
           </div>
         </div>
