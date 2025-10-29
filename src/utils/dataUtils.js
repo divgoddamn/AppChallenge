@@ -33,6 +33,17 @@ export const filterNewsBySearch = (news, searchTerm) => {
   );
 };
 
+export const filterNewsByImportance = (news, importanceLevel) => {
+  if (!importanceLevel || importanceLevel === 'all') return news;
+  if (importanceLevel === 'high+medium') {
+    return news.filter(article => article.importance === 'high' || article.importance === 'medium');
+  }
+  if (importanceLevel === 'high') {
+    return news.filter(article => article.importance === 'high');
+  }
+  return news;
+};
+
 export const getTopicCounts = (news) => {
   const counts = {};
   news.forEach(article => {

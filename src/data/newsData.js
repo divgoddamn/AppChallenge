@@ -537,7 +537,150 @@ export const newsData = [
   { id: 282, headline: "Healthcare in Córdoba", summary: "Medical services.", source: "Córdoba Health", date: "2025-10-26", lat: -31.4135, lng: -64.1811, topic: "Healthcare", sentiment: "positive", importance: "low" },
   { id: 283, headline: "Safety in Valparaíso", summary: "Public safety.", source: "Valparaíso Safety", date: "2025-10-24", lat: -33.0458, lng: -71.6144, topic: "Safety", sentiment: "positive", importance: "low" },
   { id: 284, headline: "Tech in Concepción", summary: "Technology news.", source: "Concepción Tech", date: "2025-10-25", lat: -36.8201, lng: -73.0445, topic: "Technology", sentiment: "positive", importance: "low" },
-  { id: 285, headline: "Culture in Valdivia", summary: "Arts initiative.", source: "Valdivia Culture", date: "2025-10-23", lat: -39.8140, lng: -73.2460, topic: "Culture", sentiment: "positive", importance: "low" }
+  { id: 285, headline: "Culture in Valdivia", summary: "Arts initiative.", source: "Valdivia Culture", date: "2025-10-23", lat: -39.8140, lng: -73.2460, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // Additional cities with varied importance - filling gaps and densifying coverage
+  // North America - Additional coverage
+  { id: 286, headline: "Tech Park Opens in Portland", summary: "New tech facility.", source: "Portland Tech", date: "2025-10-24", lat: 45.5017, lng: -122.6750, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 287, headline: "Housing Crisis in Boise", summary: "Affordable housing shortage.", source: "Boise News", date: "2025-10-25", lat: 43.6150, lng: -116.2023, topic: "Housing", sentiment: "negative", importance: "high" },
+  { id: 288, headline: "Transit Expansion in Tucson", summary: "Bus line expansion.", source: "Tucson Transit", date: "2025-10-23", lat: 32.2226, lng: -110.9747, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 289, headline: "Business Growth in Raleigh", summary: "Corporate expansion.", source: "Raleigh Business", date: "2025-10-26", lat: 35.7796, lng: -78.6382, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 290, headline: "Healthcare in Bakersfield", summary: "New clinic opens.", source: "Bakersfield Health", date: "2025-10-24", lat: 35.3733, lng: -119.0187, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 291, headline: "Education Summit in Berkeley", summary: "School development.", source: "Berkeley Education", date: "2025-10-25", lat: 37.8716, lng: -122.2727, topic: "Education", sentiment: "positive", importance: "medium" },
+  { id: 292, headline: "Environmental Crisis in Las Vegas", summary: "Water shortage severe.", source: "Vegas Green", date: "2025-10-23", lat: 36.1699, lng: -115.1398, topic: "Environment", sentiment: "negative", importance: "high" },
+  { id: 293, headline: "Culture in Santa Fe", summary: "Art scene thriving.", source: "Santa Fe Culture", date: "2025-10-26", lat: 35.0853, lng: -106.6056, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 294, headline: "Safety Initiative in Tucson", summary: "Crime prevention program.", source: "Tucson Safety", date: "2025-10-24", lat: 32.2226, lng: -110.9747, topic: "Safety", sentiment: "positive", importance: "low" },
+  { id: 295, headline: "Tech Hub in Boulder", summary: "Startup ecosystem growing.", source: "Boulder Tech", date: "2025-10-25", lat: 40.0150, lng: -105.2705, topic: "Technology", sentiment: "positive", importance: "low" },
+  
+  // Europe - Additional coverage
+  { id: 296, headline: "Infrastructure in Cologne", summary: "City improvement.", source: "Cologne News", date: "2025-10-23", lat: 50.9375, lng: 6.9603, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  { id: 297, headline: "Healthcare in Frankfurt", summary: "Hospital expansion.", source: "Frankfurt Health", date: "2025-10-26", lat: 50.1109, lng: 8.6821, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 298, headline: "Business Crisis in Turin", summary: "Economic downturn.", source: "Turin Business", date: "2025-10-24", lat: 45.0703, lng: 7.6869, topic: "Business", sentiment: "negative", importance: "high" },
+  { id: 299, headline: "Culture in Venice", summary: "Art festival.", source: "Venice Culture", date: "2025-10-25", lat: 45.4408, lng: 12.3155, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 300, headline: "Transportation in Munich", summary: "U-Bahn expansion.", source: "Munich Transit", date: "2025-10-23", lat: 48.1351, lng: 11.5820, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 301, headline: "Education in Basel", summary: "University growth.", source: "Basel Education", date: "2025-10-26", lat: 47.5596, lng: 7.5886, topic: "Education", sentiment: "positive", importance: "medium" },
+  { id: 302, headline: "Environment in Rotterdam", summary: "Green initiatives.", source: "Rotterdam Green", date: "2025-10-24", lat: 51.9225, lng: 4.4792, topic: "Environment", sentiment: "positive", importance: "low" },
+  { id: 303, headline: "Safety in Lyon", summary: "Police reform.", source: "Lyon Safety", date: "2025-10-25", lat: 45.7640, lng: 4.8357, topic: "Safety", sentiment: "positive", importance: "low" },
+  { id: 304, headline: "Tech in Zurich Extended", summary: "Fintech boom.", source: "Zurich Tech", date: "2025-10-23", lat: 47.3769, lng: 8.5469, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 305, headline: "Development in Antwerp", summary: "Housing project.", source: "Antwerp News", date: "2025-10-26", lat: 51.2194, lng: 4.4025, topic: "Housing", sentiment: "positive", importance: "low" },
+  
+  // Asia - Additional coverage  
+  { id: 306, headline: "Tech Crisis in Seoul Extended", summary: "Semiconductor shortage.", source: "Seoul Extended Tech", date: "2025-10-24", lat: 37.5665, lng: 126.9780, topic: "Technology", sentiment: "negative", importance: "high" },
+  { id: 307, headline: "Business in Busan", summary: "Port activity.", source: "Busan Business", date: "2025-10-25", lat: 35.1795, lng: 129.0756, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 308, headline: "Healthcare in Bangkok Extended", summary: "Medical tourism.", source: "Bangkok Extended Health", date: "2025-10-23", lat: 13.7563, lng: 100.5018, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 309, headline: "Culture in Kyoto", summary: "Arts preservation.", source: "Kyoto Culture", date: "2025-10-26", lat: 35.0116, lng: 135.7681, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 310, headline: "Transportation in Tokyo Extended", summary: "Maglev launch.", source: "Tokyo Extended Transit", date: "2025-10-24", lat: 35.6762, lng: 139.6503, topic: "Transportation", sentiment: "positive", importance: "medium" },
+  { id: 311, headline: "Education in Osaka", summary: "School innovation.", source: "Osaka Education", date: "2025-10-25", lat: 34.6937, lng: 135.5023, topic: "Education", sentiment: "positive", importance: "low" },
+  { id: 312, headline: "Environment Crisis in Jakarta Extended", summary: "Pollution emergency.", source: "Jakarta Extended Green", date: "2025-10-23", lat: -6.2088, lng: 106.8456, topic: "Environment", sentiment: "negative", importance: "high" },
+  { id: 313, headline: "Development in Bangalore Extended", summary: "IT park expansion.", source: "Bangalore Extended News", date: "2025-10-26", lat: 12.9716, lng: 77.5946, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 314, headline: "Safety in Bangkok Extended 2", summary: "Public safety boost.", source: "Bangkok Extended 2 Safety", date: "2025-10-24", lat: 13.7563, lng: 100.5018, topic: "Safety", sentiment: "positive", importance: "low" },
+  { id: 315, headline: "Business in Hanoi Extended", summary: "Economic growth.", source: "Hanoi Extended Business", date: "2025-10-25", lat: 21.0285, lng: 105.8542, topic: "Business", sentiment: "positive", importance: "medium" },
+  
+  // Africa - Additional coverage
+  { id: 316, headline: "Healthcare Crisis in Lagos Extended", summary: "Medical emergency.", source: "Lagos Extended Health", date: "2025-10-23", lat: 6.5244, lng: 3.3792, topic: "Healthcare", sentiment: "negative", importance: "high" },
+  { id: 317, headline: "Education in Nairobi Extended", summary: "School expansion.", source: "Nairobi Extended Education", date: "2025-10-26", lat: -1.2921, lng: 36.8219, topic: "Education", sentiment: "positive", importance: "low" },
+  { id: 318, headline: "Tech in Accra Extended 2", summary: "Digital hub growth.", source: "Accra Extended 2 Tech", date: "2025-10-24", lat: 5.6037, lng: -0.1870, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 319, headline: "Environment in Cape Town Extended", summary: "Climate action.", source: "Cape Town Extended Green", date: "2025-10-25", lat: -33.9249, lng: 18.4241, topic: "Environment", sentiment: "positive", importance: "medium" },
+  { id: 320, headline: "Development in Addis Ababa Extended", summary: "Urban project.", source: "Addis Ababa Extended News", date: "2025-10-23", lat: 9.0320, lng: 38.7469, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 321, headline: "Safety Crisis in Kinshasa Extended", summary: "Violence increase.", source: "Kinshasa Extended Safety", date: "2025-10-26", lat: -4.3819, lng: 15.3136, topic: "Safety", sentiment: "negative", importance: "high" },
+  { id: 322, headline: "Business in Dar es Salaam Extended", summary: "Commerce news.", source: "Dar es Salaam Extended Business", date: "2025-10-24", lat: -6.8000, lng: 39.2800, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 323, headline: "Transportation in Cairo Extended", summary: "Metro expansion.", source: "Cairo Extended Transit", date: "2025-10-25", lat: 30.0444, lng: 31.2357, topic: "Transportation", sentiment: "positive", importance: "medium" },
+  { id: 324, headline: "Healthcare in Johannesburg Extended", summary: "Hospital development.", source: "Johannesburg Extended Health", date: "2025-10-23", lat: -26.2044, lng: 28.0456, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 325, headline: "Culture in Kigali Extended", summary: "Arts initiative.", source: "Kigali Extended Culture", date: "2025-10-26", lat: -1.9505, lng: 29.8739, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // South America - Additional coverage
+  { id: 326, headline: "Tech Boom in São Paulo Extended 2", summary: "Startup growth.", source: "São Paulo Extended 2 Tech", date: "2025-10-24", lat: -23.5505, lng: -46.6333, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 327, headline: "Business Crisis in Buenos Aires Extended", summary: "Economic decline.", source: "Buenos Aires Extended Business", date: "2025-10-25", lat: -34.6037, lng: -58.3816, topic: "Business", sentiment: "negative", importance: "high" },
+  { id: 328, headline: "Environment in Rio Extended 2", summary: "Forest protection.", source: "Rio Extended 2 Green", date: "2025-10-23", lat: -22.9068, lng: -43.1729, topic: "Environment", sentiment: "positive", importance: "low" },
+  { id: 329, headline: "Transportation in Bogotá Extended", summary: "Transit system.", source: "Bogotá Extended Transit", date: "2025-10-26", lat: 4.7110, lng: -74.0721, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 330, headline: "Healthcare in Lima Extended 2", summary: "Medical services.", source: "Lima Extended 2 Health", date: "2025-10-24", lat: -12.0464, lng: -77.0428, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 331, headline: "Education in Caracas Extended", summary: "School crisis.", source: "Caracas Extended Education", date: "2025-10-25", lat: 10.4806, lng: -66.9036, topic: "Education", sentiment: "negative", importance: "high" },
+  { id: 332, headline: "Development in Medellín Extended", summary: "Urban renewal.", source: "Medellín Extended News", date: "2025-10-23", lat: 6.2442, lng: -75.5812, topic: "Housing", sentiment: "positive", importance: "medium" },
+  { id: 333, headline: "Safety in Rio Extended 3", summary: "Crime prevention.", source: "Rio Extended 3 Safety", date: "2025-10-26", lat: -22.9068, lng: -43.1729, topic: "Safety", sentiment: "positive", importance: "low" },
+  { id: 334, headline: "Culture in Salvador Extended", summary: "Arts event.", source: "Salvador Extended Culture", date: "2025-10-24", lat: -12.9714, lng: -38.5014, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 335, headline: "Business in Santiago Extended", summary: "Economic update.", source: "Santiago Extended Business", date: "2025-10-25", lat: -33.8688, lng: -51.2093, topic: "Business", sentiment: "positive", importance: "low" },
+  
+  // Middle East - Additional coverage
+  { id: 336, headline: "Tech in Dubai Extended", summary: "Innovation hub.", source: "Dubai Extended Tech", date: "2025-10-23", lat: 25.2048, lng: 55.2708, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 337, headline: "Business Crisis in Tehran Extended", summary: "Economic sanctions.", source: "Tehran Extended Business", date: "2025-10-26", lat: 35.6892, lng: 51.3890, topic: "Business", sentiment: "negative", importance: "high" },
+  { id: 338, headline: "Healthcare in Jerusalem Extended", summary: "Medical facility.", source: "Jerusalem Extended Health", date: "2025-10-24", lat: 31.7683, lng: 35.2137, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 339, headline: "Transportation in Riyadh Extended", summary: "Metro launch.", source: "Riyadh Extended Transit", date: "2025-10-25", lat: 24.7136, lng: 46.6753, topic: "Transportation", sentiment: "positive", importance: "medium" },
+  { id: 340, headline: "Culture in Baghdad Extended", summary: "Arts restoration.", source: "Baghdad Extended Culture", date: "2025-10-23", lat: 33.3128, lng: 44.3615, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // Australia/Oceania - Additional coverage
+  { id: 341, headline: "Tech in Sydney Extended", summary: "Startup scene.", source: "Sydney Extended Tech", date: "2025-10-26", lat: -33.8688, lng: 151.2093, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 342, headline: "Development in Melbourne Extended", summary: "Housing boom.", source: "Melbourne Extended News", date: "2025-10-24", lat: -37.8136, lng: 144.9631, topic: "Housing", sentiment: "positive", importance: "medium" },
+  { id: 343, headline: "Environment Crisis in Great Barrier", summary: "Coral bleaching.", source: "Barrier Green", date: "2025-10-25", lat: -16.2859, lng: 145.7781, topic: "Environment", sentiment: "negative", importance: "high" },
+  { id: 344, headline: "Business in Wellington Extended", summary: "Economic news.", source: "Wellington Extended Business", date: "2025-10-23", lat: -41.2865, lng: 174.7762, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 345, headline: "Healthcare in Auckland Extended", summary: "Hospital news.", source: "Auckland Extended Health", date: "2025-10-26", lat: -37.0082, lng: 174.6645, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  
+  // India - Additional coverage
+  { id: 346, headline: "Tech Boom in Bangalore Extended 2", summary: "IT growth.", source: "Bangalore Extended 2 Tech", date: "2025-10-24", lat: 12.9716, lng: 77.5946, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 347, headline: "Business in Mumbai Extended", summary: "Commerce news.", source: "Mumbai Extended Business", date: "2025-10-25", lat: 19.0760, lng: 72.8777, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 348, headline: "Environment Crisis in Delhi Extended", summary: "Air pollution.", source: "Delhi Extended Green", date: "2025-10-23", lat: 28.7041, lng: 77.1025, topic: "Environment", sentiment: "negative", importance: "high" },
+  { id: 349, headline: "Healthcare in Bangalore Extended 3", summary: "Medical expansion.", source: "Bangalore Extended 3 Health", date: "2025-10-26", lat: 12.9716, lng: 77.5946, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 350, headline: "Transportation in Kolkata Extended", summary: "Metro news.", source: "Kolkata Extended Transit", date: "2025-10-24", lat: 22.5726, lng: 88.3639, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 351, headline: "Education in Chennai Extended", summary: "School innovation.", source: "Chennai Extended Education", date: "2025-10-25", lat: 13.0827, lng: 80.2707, topic: "Education", sentiment: "positive", importance: "medium" },
+  { id: 352, headline: "Development in Delhi Extended 2", summary: "Housing project.", source: "Delhi Extended 2 News", date: "2025-10-23", lat: 28.7041, lng: 77.1025, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 353, headline: "Safety in Mumbai Extended 2", summary: "Crime update.", source: "Mumbai Extended 2 Safety", date: "2025-10-26", lat: 19.0760, lng: 72.8777, topic: "Safety", sentiment: "positive", importance: "low" },
+  { id: 354, headline: "Culture in Bangalore Extended 4", summary: "Arts scene.", source: "Bangalore Extended 4 Culture", date: "2025-10-24", lat: 12.9716, lng: 77.5946, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 355, headline: "Infrastructure in Hyderabad", summary: "City development.", source: "Hyderabad News", date: "2025-10-25", lat: 17.3850, lng: 78.4867, topic: "Infrastructure", sentiment: "positive", importance: "low" },
+  
+  // Middle America - Additional coverage
+  { id: 356, headline: "Development in Panama City", summary: "Urban project.", source: "Panama City News", date: "2025-10-23", lat: 8.9824, lng: -79.5199, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 357, headline: "Business in San Jose Costa Rica", summary: "Commerce news.", source: "San Jose Business", date: "2025-10-26", lat: 9.9281, lng: -84.0907, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 358, headline: "Tech in Tegucigalpa", summary: "Tech growth.", source: "Tegucigalpa Tech", date: "2025-10-24", lat: 14.0723, lng: -87.1921, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 359, headline: "Healthcare in San Salvador", summary: "Medical facility.", source: "San Salvador Health", date: "2025-10-25", lat: 13.6929, lng: -89.2182, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 360, headline: "Culture in Belize City", summary: "Arts event.", source: "Belize City Culture", date: "2025-10-23", lat: 17.2505, lng: -88.7589, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // East Asia - Additional coverage
+  { id: 361, headline: "Tech Crisis in Taipei", summary: "Semiconductor issue.", source: "Taipei Tech", date: "2025-10-26", lat: 25.0330, lng: 121.5654, topic: "Technology", sentiment: "negative", importance: "high" },
+  { id: 362, headline: "Business in Hong Kong Extended", summary: "Commerce update.", source: "Hong Kong Extended Business", date: "2025-10-24", lat: 22.3193, lng: 114.1694, topic: "Business", sentiment: "positive", importance: "medium" },
+  { id: 363, headline: "Environment in Macau", summary: "Green initiative.", source: "Macau Green", date: "2025-10-25", lat: 22.1987, lng: 113.5439, topic: "Environment", sentiment: "positive", importance: "low" },
+  { id: 364, headline: "Transportation in Guangzhou Extended", summary: "Transit system.", source: "Guangzhou Extended Transit", date: "2025-10-23", lat: 23.1291, lng: 113.2644, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 365, headline: "Healthcare in Chengdu Extended", summary: "Medical services.", source: "Chengdu Extended Health", date: "2025-10-26", lat: 30.5728, lng: 104.0668, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  
+  // Pacific Islands - Additional coverage
+  { id: 366, headline: "Development in Honolulu", summary: "Island project.", source: "Honolulu News", date: "2025-10-24", lat: 21.3099, lng: -157.8581, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 367, headline: "Business in Fiji Extended", summary: "Commerce news.", source: "Fiji Extended Business", date: "2025-10-25", lat: -17.7134, lng: 178.0650, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 368, headline: "Tech in Auckland Extended 2", summary: "Technology update.", source: "Auckland Extended 2 Tech", date: "2025-10-23", lat: -37.0082, lng: 174.6645, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 369, headline: "Culture in Samoa Extended", summary: "Arts initiative.", source: "Samoa Extended Culture", date: "2025-10-26", lat: -13.7590, lng: -172.1046, topic: "Culture", sentiment: "positive", importance: "low" },
+  { id: 370, headline: "Environment in Tonga", summary: "Green program.", source: "Tonga Green", date: "2025-10-24", lat: -21.1789, lng: -175.1982, topic: "Environment", sentiment: "positive", importance: "low" },
+  
+  // SE Asia - Additional coverage
+  { id: 371, headline: "Tech Boom in Singapore Extended", summary: "IT growth.", source: "Singapore Extended Tech", date: "2025-10-25", lat: 1.3521, lng: 103.8198, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 372, headline: "Business in Jakarta Extended 2", summary: "Commerce news.", source: "Jakarta Extended 2 Business", date: "2025-10-23", lat: -6.2088, lng: 106.8456, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 373, headline: "Healthcare in Kuala Lumpur Extended", summary: "Medical facility.", source: "Kuala Lumpur Extended Health", date: "2025-10-26", lat: 3.1390, lng: 101.6869, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 374, headline: "Transportation in Bangkok Extended 3", summary: "Transit update.", source: "Bangkok Extended 3 Transit", date: "2025-10-24", lat: 13.7563, lng: 100.5018, topic: "Transportation", sentiment: "positive", importance: "low" },
+  { id: 375, headline: "Environment in Ho Chi Minh Extended", summary: "Green initiative.", source: "Ho Chi Minh Extended Green", date: "2025-10-25", lat: 10.8231, lng: 106.6297, topic: "Environment", sentiment: "positive", importance: "low" },
+  
+  // Central Asia - Additional coverage
+  { id: 376, headline: "Tech in Almaty Extended", summary: "Technology news.", source: "Almaty Extended Tech", date: "2025-10-23", lat: 43.2380, lng: 76.9454, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 377, headline: "Development in Tashkent Extended", summary: "City project.", source: "Tashkent Extended News", date: "2025-10-26", lat: 41.2995, lng: 69.2401, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 378, headline: "Business in Bishkek", summary: "Commerce news.", source: "Bishkek Business", date: "2025-10-24", lat: 42.8746, lng: 74.5698, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 379, headline: "Healthcare in Ashgabat", summary: "Medical facility.", source: "Ashgabat Health", date: "2025-10-25", lat: 37.9601, lng: 58.3261, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 380, headline: "Culture in Samarkand", summary: "Arts event.", source: "Samarkand Culture", date: "2025-10-23", lat: 39.6548, lng: 66.9597, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // Scandinavia - Additional coverage
+  { id: 381, headline: "Tech in Copenhagen Extended", summary: "Tech hub.", source: "Copenhagen Extended Tech", date: "2025-10-26", lat: 55.6761, lng: 12.5683, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 382, headline: "Development in Oslo Extended", summary: "Housing boom.", source: "Oslo Extended News", date: "2025-10-24", lat: 59.9139, lng: 10.7522, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 383, headline: "Business in Stockholm Extended", summary: "Commerce update.", source: "Stockholm Extended Business", date: "2025-10-25", lat: 59.3293, lng: 18.0686, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 384, headline: "Healthcare in Helsinki Extended", summary: "Medical news.", source: "Helsinki Extended Health", date: "2025-10-23", lat: 60.1699, lng: 24.9384, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 385, headline: "Environment in Reykjavik", summary: "Green program.", source: "Reykjavik Green", date: "2025-10-26", lat: 64.1466, lng: -21.9426, topic: "Environment", sentiment: "positive", importance: "low" },
+  
+  // Additional Eastern Europe
+  { id: 386, headline: "Tech in Kyiv Extended", summary: "Tech innovation.", source: "Kyiv Extended Tech", date: "2025-10-24", lat: 50.4501, lng: 30.5234, topic: "Technology", sentiment: "positive", importance: "medium" },
+  { id: 387, headline: "Business in Warsaw Extended", summary: "Commerce news.", source: "Warsaw Extended Business", date: "2025-10-25", lat: 52.2297, lng: 21.0122, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 388, headline: "Development in Budapest Extended", summary: "Urban project.", source: "Budapest Extended News", date: "2025-10-23", lat: 47.4979, lng: 19.0402, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 389, headline: "Healthcare in Prague Extended", summary: "Medical facility.", source: "Prague Extended Health", date: "2025-10-26", lat: 50.0755, lng: 14.4378, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 390, headline: "Culture in Bucharest Extended", summary: "Arts event.", source: "Bucharest Extended Culture", date: "2025-10-24", lat: 44.4268, lng: 26.1025, topic: "Culture", sentiment: "positive", importance: "low" },
+  
+  // Additional Caribbean
+  { id: 391, headline: "Development in San Juan", summary: "Housing project.", source: "San Juan News", date: "2025-10-25", lat: 18.3663, lng: -66.1057, topic: "Housing", sentiment: "positive", importance: "low" },
+  { id: 392, headline: "Business in Kingston", summary: "Commerce news.", source: "Kingston Business", date: "2025-10-23", lat: 18.0179, lng: -76.8099, topic: "Business", sentiment: "positive", importance: "low" },
+  { id: 393, headline: "Tech in Bridgetown", summary: "Technology update.", source: "Bridgetown Tech", date: "2025-10-26", lat: 13.1939, lng: -59.5432, topic: "Technology", sentiment: "positive", importance: "low" },
+  { id: 394, headline: "Healthcare in Port-au-Prince", summary: "Medical facility.", source: "Port-au-Prince Health", date: "2025-10-24", lat: 18.5944, lng: -72.2847, topic: "Healthcare", sentiment: "positive", importance: "low" },
+  { id: 395, headline: "Culture in Havana Extended", summary: "Arts scene.", source: "Havana Extended Culture", date: "2025-10-25", lat: 23.1136, lng: -82.3666, topic: "Culture", sentiment: "positive", importance: "low" }
 ];
 
 export const topics = [

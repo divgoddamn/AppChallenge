@@ -11,7 +11,9 @@ const FilterPanel = ({
   dateRange,
   onDateRangeChange,
   colorBy,
-  onColorByChange
+  onColorByChange,
+  importanceLevel,
+  onImportanceLevelChange
 }) => {
   const handleTopicToggle = (topicName) => {
     if (selectedTopics.includes(topicName)) {
@@ -41,6 +43,43 @@ const FilterPanel = ({
           onChange={(e) => onSearchChange(e.target.value)}
           className="w-full px-4 py-2 border border-gray-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 bg-white"
         />
+      </div>
+
+      {/* Importance Level */}
+      <div>
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Importance</h3>
+        <div className="space-y-1.5">
+          <button
+            onClick={() => onImportanceLevelChange('all')}
+            className={`w-full px-3 py-2 rounded text-sm font-medium transition-colors text-left ${
+              importanceLevel === 'all'
+                ? 'bg-gray-900 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            All Articles
+          </button>
+          <button
+            onClick={() => onImportanceLevelChange('high+medium')}
+            className={`w-full px-3 py-2 rounded text-sm font-medium transition-colors text-left ${
+              importanceLevel === 'high+medium'
+                ? 'bg-gray-900 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            High + Medium
+          </button>
+          <button
+            onClick={() => onImportanceLevelChange('high')}
+            className={`w-full px-3 py-2 rounded text-sm font-medium transition-colors text-left ${
+              importanceLevel === 'high'
+                ? 'bg-gray-900 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            High Only
+          </button>
+        </div>
       </div>
 
       {/* Color By */}

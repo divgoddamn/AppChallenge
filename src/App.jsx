@@ -9,7 +9,8 @@ import {
   filterNewsByDateRange,
   filterNewsByTopic,
   filterNewsBySentiment,
-  filterNewsBySearch
+  filterNewsBySearch,
+  filterNewsByImportance
 } from './utils/dataUtils';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   const [selectedSentiments, setSelectedSentiments] = useState([]);
   const [dateRange, setDateRange] = useState({ start: '2025-10-22', end: '2025-10-27' });
   const [colorBy, setColorBy] = useState('topic');
+  const [importanceLevel, setImportanceLevel] = useState('all');
   const [showFilters, setShowFilters] = useState(true);
   const [showInsights, setShowInsights] = useState(true);
 
@@ -29,9 +31,10 @@ function App() {
     filtered = filterNewsByDateRange(filtered, dateRange.start, dateRange.end);
     filtered = filterNewsByTopic(filtered, selectedTopics);
     filtered = filterNewsBySentiment(filtered, selectedSentiments);
+    filtered = filterNewsByImportance(filtered, importanceLevel);
     
     return filtered;
-  }, [searchTerm, dateRange, selectedTopics, selectedSentiments]);
+  }, [searchTerm, dateRange, selectedTopics, selectedSentiments, importanceLevel]);
 
   return (
     <div className="h-screen w-screen flex flex-col bg-white">
@@ -64,6 +67,8 @@ function App() {
               onDateRangeChange={setDateRange}
               colorBy={colorBy}
               onColorByChange={setColorBy}
+              importanceLevel={importanceLevel}
+              onImportanceLevelChange={setImportanceLevel}
             />
             
             <div className="mt-4">
