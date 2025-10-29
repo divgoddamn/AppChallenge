@@ -17,7 +17,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTopics, setSelectedTopics] = useState([]);
   const [selectedSentiments, setSelectedSentiments] = useState([]);
-  const [dateRange, setDateRange] = useState({ start: '2025-10-22', end: '2025-10-27' });
+  const [dateRange, setDateRange] = useState({ start: '2025-10-22', end: '2025-10-29' });
   const [colorBy, setColorBy] = useState('topic');
   const [importanceLevel, setImportanceLevel] = useState('all');
   const [showFilters, setShowFilters] = useState(true);
