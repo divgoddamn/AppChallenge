@@ -27,9 +27,9 @@ const InsightsPanel = ({ news }) => {
   return (
     <div className="space-y-4">
       {/* Top Stories */}
-      <div className="bg-white shadow-lg rounded-lg p-4">
+      <div className="bg-white border border-gray-200 rounded p-4">
         <div className="flex items-center gap-2 mb-3">
-          <Newspaper size={20} className="text-blue-600" />
+          <Newspaper size={18} className="text-gray-600" />
           <h3 className="font-semibold text-gray-800">Top Stories</h3>
         </div>
         <div className="space-y-3">
@@ -47,9 +47,9 @@ const InsightsPanel = ({ news }) => {
       </div>
 
       {/* Topic Distribution */}
-      <div className="bg-white shadow-lg rounded-lg p-4">
+      <div className="bg-white border border-gray-200 rounded p-4">
         <div className="flex items-center gap-2 mb-3">
-          <TrendingUp size={20} className="text-green-600" />
+          <TrendingUp size={18} className="text-gray-600" />
           <h3 className="font-semibold text-gray-800">Topic Distribution</h3>
         </div>
         <ResponsiveContainer width="100%" height={200}>
@@ -79,9 +79,9 @@ const InsightsPanel = ({ news }) => {
       </div>
 
       {/* Sentiment Analysis */}
-      <div className="bg-white shadow-lg rounded-lg p-4">
+      <div className="bg-white border border-gray-200 rounded p-4">
         <div className="flex items-center gap-2 mb-3">
-          <AlertTriangle size={20} className="text-amber-600" />
+          <AlertTriangle size={18} className="text-gray-600" />
           <h3 className="font-semibold text-gray-800">Sentiment Analysis</h3>
         </div>
         <ResponsiveContainer width="100%" height={180}>

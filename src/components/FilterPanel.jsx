@@ -30,45 +30,39 @@ const FilterPanel = ({
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 space-y-4">
+    <div className="space-y-6">
       {/* Search */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Search size={18} className="text-gray-600" />
-          <h3 className="font-semibold text-gray-800">Search</h3>
-        </div>
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Search</h3>
         <input
           type="text"
-          placeholder="Search headlines, summaries..."
+          placeholder="Search articles..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+          className="w-full px-4 py-2 border border-gray-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 bg-white"
         />
       </div>
 
       {/* Color By */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Filter size={18} className="text-gray-600" />
-          <h3 className="font-semibold text-gray-800">Color By</h3>
-        </div>
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Color Mode</h3>
         <div className="flex gap-2">
           <button
             onClick={() => onColorByChange('topic')}
-            className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${
               colorBy === 'topic'
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-gray-900 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
             Topic
           </button>
           <button
             onClick={() => onColorByChange('sentiment')}
-            className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${
               colorBy === 'sentiment'
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-gray-900 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
             Sentiment
@@ -78,45 +72,39 @@ const FilterPanel = ({
 
       {/* Date Range */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Calendar size={18} className="text-gray-600" />
-          <h3 className="font-semibold text-gray-800">Date Range</h3>
-        </div>
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Date Range</h3>
         <div className="space-y-2">
           <input
             type="date"
             value={dateRange.start}
             onChange={(e) => onDateRangeChange({ ...dateRange, start: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+            className="w-full px-4 py-2 border border-gray-200 rounded text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gray-400"
           />
           <input
             type="date"
             value={dateRange.end}
             onChange={(e) => onDateRangeChange({ ...dateRange, end: e.target.value })}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+            className="w-full px-4 py-2 border border-gray-200 rounded text-sm bg-white focus:outline-none focus:ring-1 focus:ring-gray-400"
           />
         </div>
       </div>
 
       {/* Topics */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Tag size={18} className="text-gray-600" />
-          <h3 className="font-semibold text-gray-800">Topics</h3>
-        </div>
-        <div className="flex flex-wrap gap-2">
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Topics</h3>
+        <div className="flex flex-wrap gap-1.5">
           {topics.map((topic) => (
             <button
               key={topic.name}
               onClick={() => handleTopicToggle(topic.name)}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+              className={`px-2.5 py-1.5 rounded text-xs font-medium transition-all ${
                 selectedTopics.length === 0 || selectedTopics.includes(topic.name)
-                  ? 'text-white'
-                  : 'opacity-40 text-white'
+                  ? ''
+                  : 'opacity-40'
               }`}
-              style={{ 
-                backgroundColor: topic.color,
-                border: selectedTopics.includes(topic.name) ? '2px solid #1f2937' : '2px solid transparent'
+              style={{
+                backgroundColor: selectedTopics.includes(topic.name) ? '#1f2937' : '#f3f4f6',
+                color: selectedTopics.includes(topic.name) ? 'white' : '#4b5563'
               }}
             >
               {topic.name}
@@ -126,19 +114,16 @@ const FilterPanel = ({
         {selectedTopics.length > 0 && (
           <button
             onClick={() => onTopicChange([])}
-            className="mt-2 text-xs text-blue-600 hover:text-blue-800"
+            className="mt-3 text-xs text-gray-500 hover:text-gray-700"
           >
-            Clear all
+            Clear
           </button>
         )}
       </div>
 
       {/* Sentiments */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Heart size={16} className="text-gray-400" />
-          <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Sentiment</h3>
-        </div>
+        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Sentiment</h3>
         <div className="flex gap-2">
           {Object.entries(sentiments).map(([key, value]) => (
             <button
