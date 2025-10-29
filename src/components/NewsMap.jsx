@@ -89,19 +89,47 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
             click: () => onMarkerClick && onMarkerClick(article)
           }}
         >
-          <Popup maxWidth={300}>
-            <div className="p-2">
+          <Popup maxWidth={350}>
+            <div className="p-3 max-h-96 overflow-y-auto">
               <h3 className="font-bold text-sm mb-2 text-gray-900">
                 {article.headline}
               </h3>
-              <p className="text-xs text-gray-600 mb-2">
-                {article.summary}
-              </p>
-              <div className="flex justify-between items-center text-xs">
-                <span className="text-gray-500">{article.source}</span>
-                <span className="text-gray-500">{article.date}</span>
+              
+              {article.aiOverview && (
+                <div className="mb-3">
+                  <p className="text-xs font-semibold text-gray-700 mb-1">AI Overview:</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {article.aiOverview}
+                  </p>
+                </div>
+              )}
+              
+              {article.summary && !article.aiOverview && (
+                <p className="text-xs text-gray-600 mb-2">
+                  {article.summary}
+                </p>
+              )}
+              
+              <div className="mt-3 pt-2 border-t border-gray-200">
+                <div className="flex justify-between items-center text-xs mb-2">
+                  <span className="text-gray-500">{article.date}</span>
+                </div>
+                
+                {article.sourceUrl && (
+                  <a 
+                    href={article.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 hover:text-blue-800 underline block mb-2"
+                  >
+                    Read full story →
+                  </a>
+                )}
+                
+                <p className="text-xs text-gray-500 mb-2">Source: {article.source}</p>
               </div>
-              <div className="mt-2 flex gap-2">
+              
+              <div className="mt-2 flex gap-2 flex-wrap">
                 <span 
                   className="px-2 py-1 rounded text-xs text-white"
                   style={{ backgroundColor: getMarkerColor(article) }}
