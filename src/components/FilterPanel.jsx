@@ -97,14 +97,13 @@ const FilterPanel = ({
             <button
               key={topic.name}
               onClick={() => handleTopicToggle(topic.name)}
-              className={`px-2.5 py-1.5 rounded text-xs font-medium transition-all ${
+              className={`px-2.5 py-1.5 rounded text-xs font-medium text-white transition-all ${
                 selectedTopics.length === 0 || selectedTopics.includes(topic.name)
-                  ? ''
+                  ? 'opacity-100'
                   : 'opacity-40'
               }`}
               style={{
-                backgroundColor: selectedTopics.includes(topic.name) ? '#1f2937' : '#f3f4f6',
-                color: selectedTopics.includes(topic.name) ? 'white' : '#4b5563'
+                backgroundColor: topic.color
               }}
             >
               {topic.name}

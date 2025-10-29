@@ -243,22 +243,22 @@ export const newsData = [
 ];
 
 export const topics = [
-  { name: "Housing", color: "#3b82f6" },
-  { name: "Transportation", color: "#f59e0b" },
-  { name: "Economy", color: "#10b981" },
-  { name: "Safety", color: "#ef4444" },
-  { name: "Environment", color: "#22c55e" },
-  { name: "Education", color: "#8b5cf6" },
-  { name: "Business", color: "#ec4899" },
-  { name: "Healthcare", color: "#06b6d4" },
-  { name: "Culture", color: "#f97316" },
-  { name: "Technology", color: "#6366f1" },
-  { name: "Infrastructure", color: "#84cc16" },
-  { name: "Community", color: "#a855f7" }
+  { name: "Housing", color: "#8ba3c4" },
+  { name: "Transportation", color: "#c9a573" },
+  { name: "Economy", color: "#7faba8" },
+  { name: "Safety", color: "#ad8686" },
+  { name: "Environment", color: "#9fb89e" },
+  { name: "Education", color: "#a89fc4" },
+  { name: "Business", color: "#c499a8" },
+  { name: "Healthcare", color: "#7dc9d4" },
+  { name: "Culture", color: "#d4a373" },
+  { name: "Technology", color: "#9ca4c9" },
+  { name: "Infrastructure", color: "#a8c973" },
+  { name: "Community", color: "#b497c9" }
 ];
 
 export const sentiments = {
-  positive: { color: "#10b981", label: "Positive" },
-  negative: { color: "#ef4444", label: "Negative" },
-  neutral: { color: "#6b7280", label: "Neutral" }
+  positive: { color: "#8fb89e", label: "Positive" },
+  negative: { color: "#ad8686", label: "Negative" },
+  neutral: { color: "#9ca3ad", label: "Neutral" }
 };
