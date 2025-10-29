@@ -1,7 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { topics, sentiments } from '../data/newsData';
+import ArticleQAModal from './ArticleQAModal';
 
 // Fix for default marker icons in React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
@@ -55,6 +56,8 @@ const MapUpdater = ({ news }) => {
 };
 
 const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [isQAModalOpen, setIsQAModalOpen] = useState(false);
   const center = [37.7749, -122.4194]; // San Francisco
   
   const getMarkerColor = (article) => {
@@ -64,6 +67,16 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
       const topic = topics.find(t => t.name === article.topic);
       return topic ? topic.color : '#6b7280';
     }
+  };
+  
+  const handleOpenQAModal = (article) => {
+    setSelectedArticle(article);
+    setIsQAModalOpen(true);
+  };
+  
+  const handleCloseQAModal = () => {
+    setIsQAModalOpen(false);
+    setSelectedArticle(null);
   };
 
   return (
@@ -129,7 +142,7 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
                 <p className="text-xs text-gray-500 mb-2">Source: {article.source}</p>
               </div>
               
-              <div className="mt-2 flex gap-2 flex-wrap">
+              <div className="mt-2 flex gap-2 flex-wrap mb-3">
                 <span 
                   className="px-2 py-1 rounded text-xs text-white"
                   style={{ backgroundColor: getMarkerColor(article) }}
@@ -143,10 +156,23 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
                   {article.sentiment}
                 </span>
               </div>
+              
+              <button
+                onClick={() => handleOpenQAModal(article)}
+                className="w-full mt-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded transition font-medium"
+              >
+                Ask a Question
+              </button>
             </div>
           </Popup>
         </Marker>
       ))}
+      
+      <ArticleQAModal 
+        isOpen={isQAModalOpen}
+        onClose={handleCloseQAModal}
+        article={selectedArticle}
+      />
     </MapContainer>
   );
 };
