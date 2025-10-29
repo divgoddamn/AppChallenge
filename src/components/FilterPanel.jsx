@@ -60,14 +60,14 @@ const FilterPanel = ({
             All Articles
           </button>
           <button
-            onClick={() => onImportanceLevelChange('high+medium')}
+            onClick={() => onImportanceLevelChange('high+moderate')}
             className={`w-full px-3 py-2 rounded text-sm font-medium transition-colors text-left ${
-              importanceLevel === 'high+medium'
+              importanceLevel === 'high+moderate'
                 ? 'bg-gray-900 text-white'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
-            High + Medium
+            High + Moderate
           </button>
           <button
             onClick={() => onImportanceLevelChange('high')}
