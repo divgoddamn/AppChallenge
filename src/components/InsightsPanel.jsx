@@ -1,5 +1,5 @@
 import { BarChart, Bar, PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
-import { TrendingUp, Newspaper, AlertTriangle } from 'lucide-react';
+import { TrendingUp, Newspaper, AlertTriangle, Bookmark } from 'lucide-react';
 import { getTopicCounts, getSentimentCounts, getTopStories } from '../utils/dataUtils';
 import { topics, sentiments } from '../data/newsData';
 
@@ -141,6 +141,16 @@ const InsightsPanel = ({ news }) => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Saved Articles */}
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <div className="flex items-center gap-2 mb-3">
+          <Bookmark size={18} className="text-blue-600" />
+          <h3 className="font-semibold text-gray-800">Saved for Later</h3>
+        </div>
+        <p className="text-2xl font-bold text-blue-600">12</p>
+        <p className="text-xs text-gray-600 mt-1">Articles bookmarked for reading</p>
       </div>
 
       {/* Statistics */}

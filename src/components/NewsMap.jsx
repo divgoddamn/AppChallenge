@@ -12,9 +12,11 @@ L.Icon.Default.mergeOptions({
 });
 
 // Create custom marker icons based on topic color
-const createCustomIcon = (color, sentiment) => {
+const createCustomIcon = (color, sentiment, isPersonalized = false) => {
   const size = sentiment === 'positive' ? 12 : sentiment === 'negative' ? 10 : 11;
   const opacity = sentiment === 'neutral' ? 0.7 : 1;
+  const borderColor = isPersonalized ? '#FFD700' : 'white';
+  const borderWidth = isPersonalized ? 3 : 2;
   
   return L.divIcon({
     className: 'custom-marker',
@@ -23,8 +25,8 @@ const createCustomIcon = (color, sentiment) => {
       width: ${size}px;
       height: ${size}px;
       border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      border: ${borderWidth}px solid ${borderColor};
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3)${isPersonalized ? ', 0 0 6px rgba(255,215,0,0.6)' : ''};
       opacity: ${opacity};
     "></div>`,
     iconSize: [size + 4, size + 4],
@@ -54,10 +56,14 @@ const MapUpdater = ({ news }) => {
   return null;
 };
 
-const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
+const NewsMap = ({ news, onMarkerClick, colorBy = 'topic', isPersonalized = false, userInterests = [] }) => {
   const [expandedArticleId, setExpandedArticleId] = useState(null);
   const [qaQuestions, setQaQuestions] = useState({});
   const center = [37.7749, -122.4194]; // San Francisco
+  
+  const isArticlePersonalized = (article) => {
+    return userInterests.includes(article.topic);
+  };
   
   const getMarkerColor = (article) => {
     if (colorBy === 'sentiment') {
@@ -113,11 +119,13 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
       
       <MapUpdater news={news} />
       
-      {news.map((article) => (
+      {news.map((article) => {
+        const isPersonal = isPersonalized && isArticlePersonalized(article);
+        return (
         <Marker
           key={article.id}
           position={[article.lat, article.lng]}
-          icon={createCustomIcon(getMarkerColor(article), article.sentiment)}
+          icon={createCustomIcon(getMarkerColor(article), article.sentiment, isPersonal)}
           eventHandlers={{
             click: () => onMarkerClick && onMarkerClick(article)
           }}
@@ -169,6 +177,11 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
                 >
                   {article.topic}
                 </span>
+                {isPersonal && (
+                  <span className="px-2 py-1 rounded text-xs bg-yellow-100 text-yellow-800 font-semibold">
+                    ★ For You
+                  </span>
+                )}
               </div>
               
               {/* Q&A Section */}
@@ -227,7 +240,8 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
             </div>
           </Popup>
         </Marker>
-      ))}
+      );
+      })}
     </MapContainer>
   );
 };

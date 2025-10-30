@@ -1,9 +1,10 @@
 import { useState, useMemo } from 'react';
-import { MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MapPin, ChevronLeft, ChevronRight, User } from 'lucide-react';
 import NewsMap from './components/NewsMap';
 import FilterPanel from './components/FilterPanel';
 import TimeSlider from './components/TimeSlider';
 import InsightsPanel from './components/InsightsPanel';
+import UserPreferences from './components/UserPreferences';
 import { newsData } from './data/newsData';
 import {
   filterNewsByDateRange,
@@ -22,6 +23,14 @@ function App() {
   const [importanceLevel, setImportanceLevel] = useState('all');
   const [showFilters, setShowFilters] = useState(true);
   const [showInsights, setShowInsights] = useState(true);
+  const [personalizationMode, setPersonalizationMode] = useState(false);
+  const [showUserPreferences, setShowUserPreferences] = useState(false);
+
+  // Hardcoded demo user interests
+  const demoUser = {
+    interests: ['Healthcare', 'Technology', 'Environment'],
+    locations: ['San Francisco', 'Tokyo', 'London']
+  };
 
   // Apply all filters
   const filteredNews = useMemo(() => {
@@ -33,20 +42,48 @@ function App() {
     filtered = filterNewsBySentiment(filtered, selectedSentiments);
     filtered = filterNewsByImportance(filtered, importanceLevel);
     
+    // Apply personalization filter if mode is on
+    if (personalizationMode) {
+      filtered = filtered.filter(article => {
+        const matchesTopic = demoUser.interests.includes(article.topic);
+        return matchesTopic;
+      });
+    }
+    
     return filtered;
-  }, [searchTerm, dateRange, selectedTopics, selectedSentiments, importanceLevel]);
+  }, [searchTerm, dateRange, selectedTopics, selectedSentiments, importanceLevel, personalizationMode]);
 
   return (
     <div className="h-screen w-screen flex flex-col bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 z-10">
-        <div className="px-8 py-4">
+        <div className="px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <MapPin size={28} className="text-gray-900" strokeWidth={1.5} />
             <div>
               <h1 className="text-xl font-semibold text-gray-900">Map My News</h1>
               <p className="text-xs text-gray-500">Local news visualization</p>
             </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setPersonalizationMode(!personalizationMode)}
+              className={`px-4 py-2 rounded font-medium text-sm transition-all ${
+                personalizationMode
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              {personalizationMode ? '✓ Personalized for You' : 'All News'}
+            </button>
+            <button
+              onClick={() => setShowUserPreferences(!showUserPreferences)}
+              className="p-2 hover:bg-gray-100 rounded transition-colors relative"
+              title="User profile"
+            >
+              <User size={20} className="text-gray-700" />
+            </button>
+            <UserPreferences isOpen={showUserPreferences} />
           </div>
         </div>
       </header>
@@ -95,6 +132,8 @@ function App() {
           <NewsMap
             news={filteredNews}
             colorBy={colorBy}
+            isPersonalized={personalizationMode}
+            userInterests={demoUser.interests}
           />
           
           {/* Stats Overlay */}
