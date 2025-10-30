@@ -3435,6 +3435,26 @@ export const newsData = [
   { id: 3431, headline: "Political Development in Portland", summary: "Local political news in Portland.", source: "Portland News", date: "2025-10-27", lat: 45.5000, lng: -122.6500, topic: "Politics", sentiment: "negative", importance: "high" },
   { id: 3432, headline: "Political Development in Las Vegas", summary: "Local political news in Las Vegas.", source: "Las Vegas News", date: "2025-10-27", lat: 36.1700, lng: -115.1500, topic: "Politics", sentiment: "neutral", importance: "high" },
   { id: 3433, headline: "Political Development in Minneapolis", summary: "Local political news in Minneapolis.", source: "Minneapolis News", date: "2025-10-27", lat: 44.9500, lng: -93.2500, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3434, headline: "Sports News from New York", summary: "Local sports updates in New York.", source: "New York News", date: "2025-10-27", lat: 40.6500, lng: -73.9500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3435, headline: "Sports News from Los Angeles", summary: "Local sports updates in Los Angeles.", source: "Los Angeles News", date: "2025-10-27", lat: 34.1000, lng: -118.2500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3436, headline: "Sports News from Chicago", summary: "Local sports updates in Chicago.", source: "Chicago News", date: "2025-10-27", lat: 41.9000, lng: -87.6500, topic: "Sports", sentiment: "neutral", importance: "high" },
+  { id: 3437, headline: "Sports News from Houston", summary: "Local sports updates in Houston.", source: "Houston News", date: "2025-10-27", lat: 29.8500, lng: -95.3500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3438, headline: "Sports News from Phoenix", summary: "Local sports updates in Phoenix.", source: "Phoenix News", date: "2025-10-27", lat: 33.5000, lng: -112.1000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3439, headline: "Sports News from Philadelphia", summary: "Local sports updates in Philadelphia.", source: "Philadelphia News", date: "2025-10-27", lat: 39.9500, lng: -75.1500, topic: "Sports", sentiment: "neutral", importance: "high" },
+  { id: 3440, headline: "Sports News from San Antonio", summary: "Local sports updates in San Antonio.", source: "San Antonio News", date: "2025-10-27", lat: 29.4500, lng: -98.5000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3441, headline: "Sports News from San Diego", summary: "Local sports updates in San Diego.", source: "San Diego News", date: "2025-10-27", lat: 32.7000, lng: -117.1500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3442, headline: "Sports News from Dallas", summary: "Local sports updates in Dallas.", source: "Dallas News", date: "2025-10-27", lat: 32.8000, lng: -96.8000, topic: "Sports", sentiment: "neutral", importance: "high" },
+  { id: 3443, headline: "Sports News from San Jose", summary: "Local sports updates in San Jose.", source: "San Jose News", date: "2025-10-27", lat: 37.3500, lng: -121.9000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3444, headline: "Sports News from Austin", summary: "Local sports updates in Austin.", source: "Austin News", date: "2025-10-27", lat: 30.3000, lng: -97.7000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3445, headline: "Sports News from Jacksonville", summary: "Local sports updates in Jacksonville.", source: "Jacksonville News", date: "2025-10-27", lat: 30.3500, lng: -81.6500, topic: "Sports", sentiment: "neutral", importance: "high" },
+  { id: 3446, headline: "Sports News from Seattle", summary: "Local sports updates in Seattle.", source: "Seattle News", date: "2025-10-27", lat: 47.6000, lng: -122.3000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3447, headline: "Sports News from Denver", summary: "Local sports updates in Denver.", source: "Denver News", date: "2025-10-27", lat: 39.7500, lng: -104.9500, topic: "Sports", sentiment: "neutral", importance: "high" },
+  { id: 3448, headline: "Sports News from Boston", summary: "Local sports updates in Boston.", source: "Boston News", date: "2025-10-27", lat: 42.3500, lng: -71.0500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3449, headline: "Sports News from Atlanta", summary: "Local sports updates in Atlanta.", source: "Atlanta News", date: "2025-10-27", lat: 33.7500, lng: -84.3500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3450, headline: "Sports News from Miami", summary: "Local sports updates in Miami.", source: "Miami News", date: "2025-10-27", lat: 25.8000, lng: -80.2000, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3451, headline: "Sports News from Portland", summary: "Local sports updates in Portland.", source: "Portland News", date: "2025-10-27", lat: 45.5000, lng: -122.6500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3452, headline: "Sports News from Las Vegas", summary: "Local sports updates in Las Vegas.", source: "Las Vegas News", date: "2025-10-27", lat: 36.1700, lng: -115.1500, topic: "Sports", sentiment: "positive", importance: "high" },
+  { id: 3453, headline: "Sports News from Minneapolis", summary: "Local sports updates in Minneapolis.", source: "Minneapolis News", date: "2025-10-27", lat: 44.9500, lng: -93.2500, topic: "Sports", sentiment: "neutral", importance: "high" },
 ];
 
 export const topics = [
@@ -3450,7 +3470,8 @@ export const topics = [
   { name: "Technology", color: "#9ca4c9" },
   { name: "Infrastructure", color: "#a8c973" },
   { name: "Community", color: "#b497c9" },
-  { name: "Politics", color: "#d4534f" }
+  { name: "Politics", color: "#d4534f" },
+  { name: "Sports", color: "#4a90e2" }
 ];
 
 export const sentiments = {
