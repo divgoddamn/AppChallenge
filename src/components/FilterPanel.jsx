@@ -82,33 +82,6 @@ const FilterPanel = ({
         </div>
       </div>
 
-      {/* Color By */}
-      <div>
-        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Color Mode</h3>
-        <div className="flex gap-2">
-          <button
-            onClick={() => onColorByChange('topic')}
-            className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${
-              colorBy === 'topic'
-                ? 'bg-gray-900 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-            }`}
-          >
-            Topic
-          </button>
-          <button
-            onClick={() => onColorByChange('sentiment')}
-            className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${
-              colorBy === 'sentiment'
-                ? 'bg-gray-900 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-            }`}
-          >
-            Sentiment
-          </button>
-        </div>
-      </div>
-
       {/* Date Range */}
       <div>
         <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Date Range</h3>
