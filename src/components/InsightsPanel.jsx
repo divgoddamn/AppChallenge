@@ -6,7 +6,31 @@ import { topics, sentiments } from '../data/newsData';
 const InsightsPanel = ({ news }) => {
   const topicCounts = getTopicCounts(news);
   const sentimentCounts = getSentimentCounts(news);
-  const topStories = getTopStories(news, 3);
+  
+  // Hardcoded top stories for demo
+  const topStories = [
+    {
+      id: 2167,
+      headline: "Trump Orders Resumption of U.S. Nuclear Weapons Testing",
+      source: "Reuters",
+      date: "2025-10-30",
+      topic: "Safety"
+    },
+    {
+      id: 2168,
+      headline: "Hurricane Melissa Leaves Deadly Destruction in the Caribbean",
+      source: "Associated Press",
+      date: "2025-10-30",
+      topic: "Environment"
+    },
+    {
+      id: 2169,
+      headline: "Gaza Violence Flares Up Amid Renewed Ceasefire",
+      source: "BBC",
+      date: "2025-10-30",
+      topic: "Community"
+    }
+  ];
 
   // Prepare data for charts
   const topicChartData = topicCounts.map(item => {
