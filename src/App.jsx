@@ -48,8 +48,6 @@ function App() {
         const matchesTopic = demoUser.interests.includes(article.topic);
         return matchesTopic;
       });
-      // Limit to first 50 personalized articles
-      filtered = filtered.slice(0, 50);
     }
     
     return filtered;
