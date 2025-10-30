@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { MapPin, ChevronLeft, ChevronRight, User } from 'lucide-react';
+import { ChevronLeft, ChevronRight, User } from 'lucide-react';
 import NewsMap from './components/NewsMap';
 import FilterPanel from './components/FilterPanel';
 import TimeSlider from './components/TimeSlider';
@@ -25,6 +25,23 @@ function App() {
   const [showInsights, setShowInsights] = useState(true);
   const [personalizationMode, setPersonalizationMode] = useState(false);
   const [showUserPreferences, setShowUserPreferences] = useState(false);
+
+  // Custom logo component
+  const Logo = () => (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Globe outline */}
+      <circle cx="14" cy="14" r="12" stroke="#1f2937" strokeWidth="1.5" fill="none"/>
+      {/* Map grid lines */}
+      <path d="M 14 2 Q 20 8 20 14 Q 20 20 14 26" stroke="#3b82f6" strokeWidth="1.5" fill="none"/>
+      <path d="M 14 2 Q 8 8 8 14 Q 8 20 14 26" stroke="#3b82f6" strokeWidth="1.5" fill="none"/>
+      <ellipse cx="14" cy="14" rx="12" ry="5" stroke="#3b82f6" strokeWidth="1.5" fill="none" opacity="0.5"/>
+      {/* News markers - small dots */}
+      <circle cx="10" cy="9" r="1.5" fill="#ef4444"/>
+      <circle cx="18" cy="11" r="1.5" fill="#f59e0b"/>
+      <circle cx="14" cy="18" r="1.5" fill="#10b981"/>
+      <circle cx="8" cy="15" r="1.5" fill="#3b82f6"/>
+    </svg>
+  );
 
   // Hardcoded demo user interests
   const demoUser = {
@@ -61,7 +78,7 @@ function App() {
       <header className="bg-white border-b border-gray-200 z-10">
         <div className="px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <MapPin size={28} className="text-gray-900" strokeWidth={1.5} />
+            <Logo />
             <div>
               <h1 className="text-xl font-semibold text-gray-900">Map My News</h1>
               <p className="text-xs text-gray-500">Local news visualization</p>
