@@ -5,9 +5,9 @@ export default function UserPreferences({ isOpen }) {
   // Hardcoded demo user profile
   const demoUser = {
     name: 'Alex Chen',
-    interests: ['Healthcare', 'Technology'],
+    interests: ['Healthcare', 'Technology', 'Sports'],
     locations: ['San Francisco', 'Tokyo', 'London'],
-    savedArticles: 8
+    savedArticles: 9
   };
 
   if (!isOpen) return null;
