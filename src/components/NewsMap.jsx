@@ -169,12 +169,6 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
                 >
                   {article.topic}
                 </span>
-                <span 
-                  className="px-2 py-1 rounded text-xs text-white capitalize"
-                  style={{ backgroundColor: sentiments[article.sentiment].color }}
-                >
-                  {article.sentiment}
-                </span>
               </div>
               
               {/* Q&A Section */}
