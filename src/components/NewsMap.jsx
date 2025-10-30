@@ -72,6 +72,11 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
   const handleOpenQAModal = (article) => {
     setSelectedArticle(article);
     setIsQAModalOpen(true);
+    // Close all popups by triggering escape key on map
+    setTimeout(() => {
+      const event = new KeyboardEvent('keydown', { key: 'Escape' });
+      document.dispatchEvent(event);
+    }, 0);
   };
   
   const handleCloseQAModal = () => {
@@ -158,7 +163,11 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
               </div>
               
               <button
-                onClick={() => handleOpenQAModal(article)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  handleOpenQAModal(article);
+                }}
                 className="w-full mt-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded transition font-medium"
               >
                 Ask a Question
