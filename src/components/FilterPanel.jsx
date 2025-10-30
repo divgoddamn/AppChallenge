@@ -159,34 +159,6 @@ const FilterPanel = ({
         )}
       </div>
 
-      {/* Sentiments */}
-      <div>
-        <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-3">Sentiment</h3>
-        <div className="flex gap-2">
-          {Object.entries(sentiments).map(([key, value]) => (
-            <button
-              key={key}
-              onClick={() => handleSentimentToggle(key)}
-              className={`flex-1 px-3 py-2 rounded text-xs font-medium text-white capitalize transition-all ${
-                selectedSentiments.length === 0 || selectedSentiments.includes(key)
-                  ? 'opacity-100'
-                  : 'opacity-50'
-              }`}
-              style={{ backgroundColor: value.color }}
-            >
-              {value.label}
-            </button>
-          ))}
-        </div>
-        {selectedSentiments.length > 0 && (
-          <button
-            onClick={() => onSentimentChange([])}
-            className="mt-3 text-xs text-gray-500 hover:text-gray-700"
-          >
-            Clear
-          </button>
-        )}
-      </div>
     </div>
   );
 };
