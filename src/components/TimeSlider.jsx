@@ -8,8 +8,8 @@ const TimeSlider = ({ news, onDateChange, dateRange }) => {
 
   // Get min and max dates from news data
   const dates = news.map(article => article.date).sort();
-  const minDate = dates[0] || '2025-10-22';
-  const maxDate = dates[dates.length - 1] || '2025-10-27';
+  const minDate = dates[0] || '2025-10-16';
+  const maxDate = '2025-10-29'; // Hardcoded max date
   
   const totalDays = differenceInDays(parseISO(maxDate), parseISO(minDate));
 
