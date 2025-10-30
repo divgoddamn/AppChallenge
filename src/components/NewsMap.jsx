@@ -92,16 +92,9 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic', isPersonalized = fals
       "when will this be resolved": "The SNAP program transitions permanently starting November 1st, 2025. This isn't a temporary shutdown - it's a shift to the new federal requirements. However, there's a critical 4-day window before then for residents to use their remaining benefits. The WIC program is secured through at least November 7th, providing some continued support for pregnant women and young children. The permanent implementation means New Hampshire residents should prepare for longer-term adjustments to their benefits.",
     };
     
-    let answer = "I can help answer questions about this article. Try asking specific questions about the topic.";
-    
-    // Check for key phrases (more flexible matching)
-    if (normalizedQuestion.includes('low income') || normalizedQuestion.includes('low-income')) {
-      answer = DEMO_QA["how will this affect low income families"];
-    } else if (normalizedQuestion.includes('federal rules') || normalizedQuestion.includes('new rules')) {
-      answer = DEMO_QA["what are the new federal rules"];
-    } else if (normalizedQuestion.includes('resolved') || normalizedQuestion.includes('when will')) {
-      answer = DEMO_QA["when will this be resolved"];
-    }
+    // Always return a hardcoded answer (rotate through options)
+    const answers = Object.values(DEMO_QA);
+    const answer = answers[Math.floor(Math.random() * answers.length)];
     
     setQaQuestions(prev => ({
       ...prev,
