@@ -39,12 +39,7 @@ const ArticleQAModal = ({ isOpen, onClose, article }) => {
     }, 800);
   };
 
-  if (!isOpen) {
-    console.log('Modal is closed, not rendering');
-    return null;
-  }
-  
-  console.log('Modal is rendering with article:', article?.headline);
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" style={{ zIndex: 10000 }}>
