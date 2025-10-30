@@ -84,7 +84,7 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
     
     let answer = "I can help answer questions about this article. Try asking specific questions about the topic.";
     for (const [key, value] of Object.entries(DEMO_QA)) {
-      if (normalizedQuestion.includes(key.slice(0, 20))) {
+      if (normalizedQuestion.includes(key)) {
         answer = value;
         break;
       }
