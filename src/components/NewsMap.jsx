@@ -34,24 +34,28 @@ const createCustomIcon = (color, sentiment, isPersonalized = false) => {
   });
 };
 
-// Component to update map view when bounds change
+// Component to update map view when bounds change - only on initial load
 const MapUpdater = ({ news }) => {
   const map = useMap();
+  const hasInitialized = useState(false)[0];
+  const [initialized, setInitialized] = useState(false);
   
   useEffect(() => {
-    if (news && news.length > 0) {
+    // Only fit bounds on initial load when news first has data
+    if (!initialized && news && news.length > 0) {
       try {
         const bounds = news
           .filter(article => article.lat && article.lng && !isNaN(article.lat) && !isNaN(article.lng))
           .map(article => [article.lat, article.lng]);
         if (bounds.length > 0) {
           map.fitBounds(bounds, { padding: [50, 50] });
+          setInitialized(true);
         }
       } catch (e) {
         console.error('Error updating map bounds:', e);
       }
     }
-  }, [news, map]);
+  }, [initialized, map]);
   
   return null;
 };
