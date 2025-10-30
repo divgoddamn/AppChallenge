@@ -70,6 +70,7 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
   };
   
   const handleOpenQAModal = (article) => {
+    console.log('Opening QA modal for:', article.headline);
     setSelectedArticle(article);
     setIsQAModalOpen(true);
     // Close all popups by triggering escape key on map
@@ -164,6 +165,7 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
               
               <button
                 onClick={(e) => {
+                  console.log('Button clicked for article:', article.headline);
                   e.stopPropagation();
                   e.preventDefault();
                   handleOpenQAModal(article);
