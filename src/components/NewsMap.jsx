@@ -83,11 +83,14 @@ const NewsMap = ({ news, onMarkerClick, colorBy = 'topic' }) => {
     };
     
     let answer = "I can help answer questions about this article. Try asking specific questions about the topic.";
-    for (const [key, value] of Object.entries(DEMO_QA)) {
-      if (normalizedQuestion.includes(key)) {
-        answer = value;
-        break;
-      }
+    
+    // Check for key phrases (more flexible matching)
+    if (normalizedQuestion.includes('low income') || normalizedQuestion.includes('low-income')) {
+      answer = DEMO_QA["how will this affect low income families"];
+    } else if (normalizedQuestion.includes('federal rules') || normalizedQuestion.includes('new rules')) {
+      answer = DEMO_QA["what are the new federal rules"];
+    } else if (normalizedQuestion.includes('resolved') || normalizedQuestion.includes('when will')) {
+      answer = DEMO_QA["when will this be resolved"];
     }
     
     setQaQuestions(prev => ({
