@@ -149,7 +149,7 @@ const InsightsPanel = ({ news }) => {
           <Bookmark size={18} className="text-blue-600" />
           <h3 className="font-semibold text-gray-800">Saved for Later</h3>
         </div>
-        <p className="text-2xl font-bold text-blue-600">12</p>
+        <p className="text-2xl font-bold text-blue-600">8</p>
         <p className="text-xs text-gray-600 mt-1">Articles bookmarked for reading</p>
       </div>
 

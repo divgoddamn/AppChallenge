@@ -28,7 +28,7 @@ function App() {
 
   // Hardcoded demo user interests
   const demoUser = {
-    interests: ['Healthcare', 'Technology', 'Environment'],
+    interests: ['Healthcare', 'Technology'],
     locations: ['San Francisco', 'Tokyo', 'London']
   };
 
