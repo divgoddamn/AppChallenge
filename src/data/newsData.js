@@ -3415,6 +3415,26 @@ export const newsData = [
   { id: 3412, headline: "Local news from Fiji", summary: "Breaking news in Fiji.", source: "Fiji News", date: "2025-10-29", lat: -17.8903, lng: 178.1016, topic: "Environment", sentiment: "negative", importance: "low" },
   { id: 3413, headline: "Local news from Fiji", summary: "Breaking news in Fiji.", source: "Fiji News", date: "2025-10-27", lat: -17.8720, lng: 177.7940, topic: "Economy", sentiment: "positive", importance: "moderate" },
 
+  { id: 3414, headline: "Political Development in New York", summary: "Local political news in New York.", source: "New York News", date: "2025-10-27", lat: 40.6500, lng: -73.9500, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3415, headline: "Political Development in Los Angeles", summary: "Local political news in Los Angeles.", source: "Los Angeles News", date: "2025-10-27", lat: 34.1000, lng: -118.2500, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3416, headline: "Political Development in Chicago", summary: "Local political news in Chicago.", source: "Chicago News", date: "2025-10-27", lat: 41.9000, lng: -87.6500, topic: "Politics", sentiment: "negative", importance: "high" },
+  { id: 3417, headline: "Political Development in Houston", summary: "Local political news in Houston.", source: "Houston News", date: "2025-10-27", lat: 29.8500, lng: -95.3500, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3418, headline: "Political Development in Phoenix", summary: "Local political news in Phoenix.", source: "Phoenix News", date: "2025-10-27", lat: 33.5000, lng: -112.1000, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3419, headline: "Political Development in Philadelphia", summary: "Local political news in Philadelphia.", source: "Philadelphia News", date: "2025-10-27", lat: 39.9500, lng: -75.1500, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3420, headline: "Political Development in San Antonio", summary: "Local political news in San Antonio.", source: "San Antonio News", date: "2025-10-27", lat: 29.4500, lng: -98.5000, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3421, headline: "Political Development in San Diego", summary: "Local political news in San Diego.", source: "San Diego News", date: "2025-10-27", lat: 32.7000, lng: -117.1500, topic: "Politics", sentiment: "negative", importance: "high" },
+  { id: 3422, headline: "Political Development in Dallas", summary: "Local political news in Dallas.", source: "Dallas News", date: "2025-10-27", lat: 32.8000, lng: -96.8000, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3423, headline: "Political Development in San Jose", summary: "Local political news in San Jose.", source: "San Jose News", date: "2025-10-27", lat: 37.3500, lng: -121.9000, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3424, headline: "Political Development in Austin", summary: "Local political news in Austin.", source: "Austin News", date: "2025-10-27", lat: 30.3000, lng: -97.7000, topic: "Politics", sentiment: "negative", importance: "high" },
+  { id: 3425, headline: "Political Development in Jacksonville", summary: "Local political news in Jacksonville.", source: "Jacksonville News", date: "2025-10-27", lat: 30.3500, lng: -81.6500, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3426, headline: "Political Development in Seattle", summary: "Local political news in Seattle.", source: "Seattle News", date: "2025-10-27", lat: 47.6000, lng: -122.3000, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3427, headline: "Political Development in Denver", summary: "Local political news in Denver.", source: "Denver News", date: "2025-10-27", lat: 39.7500, lng: -104.9500, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3428, headline: "Political Development in Boston", summary: "Local political news in Boston.", source: "Boston News", date: "2025-10-27", lat: 42.3500, lng: -71.0500, topic: "Politics", sentiment: "negative", importance: "high" },
+  { id: 3429, headline: "Political Development in Atlanta", summary: "Local political news in Atlanta.", source: "Atlanta News", date: "2025-10-27", lat: 33.7500, lng: -84.3500, topic: "Politics", sentiment: "positive", importance: "high" },
+  { id: 3430, headline: "Political Development in Miami", summary: "Local political news in Miami.", source: "Miami News", date: "2025-10-27", lat: 25.8000, lng: -80.2000, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3431, headline: "Political Development in Portland", summary: "Local political news in Portland.", source: "Portland News", date: "2025-10-27", lat: 45.5000, lng: -122.6500, topic: "Politics", sentiment: "negative", importance: "high" },
+  { id: 3432, headline: "Political Development in Las Vegas", summary: "Local political news in Las Vegas.", source: "Las Vegas News", date: "2025-10-27", lat: 36.1700, lng: -115.1500, topic: "Politics", sentiment: "neutral", importance: "high" },
+  { id: 3433, headline: "Political Development in Minneapolis", summary: "Local political news in Minneapolis.", source: "Minneapolis News", date: "2025-10-27", lat: 44.9500, lng: -93.2500, topic: "Politics", sentiment: "positive", importance: "high" },
 ];
 
 export const topics = [
@@ -3429,7 +3449,8 @@ export const topics = [
   { name: "Culture", color: "#d4a373" },
   { name: "Technology", color: "#9ca4c9" },
   { name: "Infrastructure", color: "#a8c973" },
-  { name: "Community", color: "#b497c9" }
+  { name: "Community", color: "#b497c9" },
+  { name: "Politics", color: "#d4534f" }
 ];
 
 export const sentiments = {
